@@ -1,0 +1,45 @@
+1、多态是什么？
+    多态性的体现，其实就是一句话，父类引用指向子类对象
+    格式：父类名称 对象名 = new 子类名称();
+    //父类
+    public class People{
+    	public void fun(){
+            System.out.println("我是父类方法");
+        }
+    }
+
+    //子类
+    public class Student extends People{
+        public void fun(){
+            System.out.println("我是子类方法");
+        }
+    }
+
+    public class Test {
+        public static void main(String[] args) {
+            People people = new Student();
+            people.fun();  //我是子类方法
+        }
+    }
+
+2、什么是方法的重载？
+    重载：
+        方法名相同，【参数类型】和【参数个数】不同的同名方法就构成了重载；
+    例：
+        //参数个数不同
+        public static double area(double r) {
+            return r * r * 3.14;
+        }
+
+        public static double area(double w, double h) {
+            return w * h * 2;
+        }
+
+        //参数类型不同 参数个数不同
+        public static double area(double r) {
+            return r * r * 3.14;
+        }
+
+        public static double area(int w, int h) {
+            return w * h * 2;
+        }
