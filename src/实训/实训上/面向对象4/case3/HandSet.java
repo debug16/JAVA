@@ -1,4 +1,4 @@
-package 实训.实训上.面向对象4;
+package 实训.实训上.面向对象4.case3;
 
 /**
  * @Author DOME
